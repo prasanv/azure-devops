@@ -1,4 +1,14 @@
 # Starter pipeline
+- task: AzureFunctionApp@2
+  inputs:
+    azureSubscription: 'Azure subscription 1(1107b898-6fcb-4b52-89f4-a93b7ce4b0c7)'
+    appType: 'functionApp'
+    appName: 'azuretrial'
+    deployToSlotOrASE: true
+    resourceGroupName: 'azuretrial_group'
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
