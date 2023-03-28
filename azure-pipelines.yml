@@ -17,14 +17,3 @@ steps:
     echo Prasan, will add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-
-- task: AzureFunctionApp@2
-  inputs:
-    azureSubscription: 'Azure subscription 1(1107b898-6fcb-4b52-89f4-a93b7ce4b0c7)'
-    appType: 'functionApp'
-    appName: 'azuretrial'
-    deployToSlotOrASE: true
-    resourceGroupName: 'azuretrial_group'
-    slotName: 'production'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    deploymentMethod: 'auto'
